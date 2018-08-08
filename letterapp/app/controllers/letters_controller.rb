@@ -5,7 +5,7 @@ class LettersController < ApplicationController
     def new
     end
     
-    def tweets
+    def edit
     end
 
 end
