@@ -1,0 +1,33 @@
+<header>
+    <li class="header_left clearfix"><%= link_to 'ホーム', '/letters' %></li>
+    <li class="header_left clearfix"><%= link_to 'ツイート', '/letters/show' %></li>
+    <li class="header_right clearfix"><%= link_to 'ツイートする', '/letters/new'%></li>
+</header>
+<section class="tweets_list">
+  <br>
+  <br>
+  <br>
+<h1>過去ツイート</h1>
+<p><%= notice %></p>
+<table>
+  <tr>
+    <th>内容</th>
+    <th>日時</th></th>
+  </tr>
+<% @letters.each do |letter| %>
+  <tr>
+    <td><%= letter.content %></td>
+    <td>日時</td>
+    <td><%= link_to "ツイートを編集する", edit_letter_path(letter.id) %></td>
+    <td><%= link_to 'ツイートを削除する', letter_path(letter.id), method: :delete %></td>
+  </tr>
+<% end %>
+<br>
+</table>
+<p><%= link_to '新しくツイートする', new_letter_path %></p>
+</section>
+
+<footer class="footers">
+    <p>つぶやき</p>
+    <p>© 2018- tubuyaki Corp.</p>
+</footer>

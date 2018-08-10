@@ -1,0 +1,38 @@
+<%= form_with(model: @letter, local: true) do |form| %>
+  <% if @letter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @letter.errors.count %>件のエラーがあります。</h2>
+      <ul>
+
+      <% @letter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<header>
+    <li class="header_left clearfix"><%= link_to 'ホーム', '/letters' %></li>
+    <li class="header_left clearfix"><%= link_to 'ツイート', '/letters/show' %></li>
+    <li class="header_right clearfix"><%= link_to 'ツイートする', '/letters/new'%></li>
+</header>
+
+<body>
+  <br>
+  <br>
+  <br>
+<%= form_with(model: @letter, local: true) do |form| %>
+  <div class="tweet_content">
+    <p><%= form.label :ツイートする %></p>
+    <p class="enter_font"><%= form.text_field :content %></p>
+    <p class="enter_key"><%= form.submit %></p>
+  </div>
+<% end %>
+<%= image_tag 'main_img.jpg',:class => "main_image"  %>
+<% end %>
+</body>
+
+<footer class="footers">
+    <p>つぶやき</p>
+    <p>© 2018- tubuyaki Corp.</p>
+</footer>
