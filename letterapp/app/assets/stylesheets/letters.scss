@@ -23,12 +23,19 @@ header {
   font-size:120%;
 }
 
+h2{
+    color:red;
+}
 
 li {
     list-style: none;
 }
 li a{
     color: white;
+    text-decoration: none;
+}
+li a:hover{
+    opacity:0.7;
 }
 
 
@@ -51,13 +58,57 @@ img{
     width:15%;
     height:40px;
     background-color:#00aced;
-    font-color:white;
+    color:white;
+    border-radius: 4px;
+}
+.enter_key input:hover{
+    opacity:0.7;
+}
+
+.check{
+    text-align:center;
+    margin: 2em auto;
+    padding: 3em;
+    width: 60%;
+    background-color: #CEECF5; 
+    box-shadow: 0 0 5px 1px #ccc; 
+}
+
+.check h4{
+    text-decoration:underline ;
+}
+.check p:hover{
+    opacity:0.7;
+}
+
+.check p input{
+    background-color:#00aced;
+    width:15%;
+    height:40px;
+    line-height: 120%;
+    color:white;
+    border-radius: 4px;
 }
 
 
 .tweets_list{
     text-align:center;
 }
+.tweets_list a{
+    color:black;
+}
+.tweets_list a:hover{
+    opacity:0.7;
+}
+
+td a{
+    text-decoration: none;
+    color :black;
+}
+td {
+    background-color:#EFFBFB;
+}
+
 table{
     margin:0 auto;
 }

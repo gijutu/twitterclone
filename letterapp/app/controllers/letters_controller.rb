@@ -1,10 +1,14 @@
 class LettersController < ApplicationController
     # before_action :set_letter, only: [:show, :edit, :update, :destroy]
-    
     def index; end
     
+    
     def new
-        @letter = Letter.new
+        if params[:back]
+            @letter = Letter.new(letter_params)
+        else
+            @letter = Letter.new
+        end
     end
     
     def show
@@ -41,10 +45,15 @@ class LettersController < ApplicationController
         end
     end
     
+    def confirm
+        @letter = Letter.new(letter_params)
+        render :new if @letter.invalid?
+    end
+    
     private
     
     # def set_letter
-        # @letter = Letter.find(params[:id])
+    #     @letter = Letter.find(params[:id])
     # end
     
     def letter_params

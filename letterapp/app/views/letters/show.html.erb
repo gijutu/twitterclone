@@ -18,13 +18,13 @@
   <tr>
     <td><%= letter.content %></td>
     <td>日時</td>
-    <td><%= link_to "ツイートを編集する", edit_letter_path(letter.id) %></td>
-    <td><%= link_to 'ツイートを削除する', letter_path(letter.id), method: :delete %></td>
+    <td><%= link_to "編集する", edit_letter_path(letter.id) %></td>
+    <td><%= link_to '削除する', letter_path(letter.id), method: :delete %></td>
   </tr>
 <% end %>
 <br>
 </table>
-<p><%= link_to '新しくツイートする', new_letter_path %></p>
+<p><%= link_to '【　新しくツイートする　】', new_letter_path %></p>
 </section>
 
 <footer class="footers">

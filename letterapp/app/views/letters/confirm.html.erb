@@ -1,0 +1,15 @@
+<section class="check">
+<h4>以下の内容で、ツイートします</h4>
+
+<%= form_with(model: @letter, url: letters_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+    <h3>ツイート：<%= @letter.content %></h3>
+  <p><%= form.submit  "ツイートする" %></p>
+<% end %>
+<br>
+<%= form_with(model: @letter, url: new_letter_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :content %>
+<%= form.submit "ツイート画面にもどる", name: 'back' %>
+<% end %>
+
+</section>
